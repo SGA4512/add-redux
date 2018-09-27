@@ -7,11 +7,10 @@ const reducer = (state = initialState, action) => {
     const newState = {...state};
 
     if(action.type === 'AGE_UP'){
-        newState.age++;
+        newState.age += action.val;
     }
-
     if(action.type === 'AGE_DOWN'){
-        newState.age--;
+        newState.age -= action.val;
     }
 
     return newState;

@@ -3,29 +3,7 @@ import './App.css';
 import { connect } from 'react-redux';
 
 class App extends Component {
-  /*constructor(props){
-  super(props)
-
-  this.state = {
-    age: 22
-  }
-
-  this.onAgeUp = this.onAgeUp.bind(this)
-  this.onAgeDown = this.onAgeDown.bind(this)
-}
-
-  onAgeUp = () => {
-    this.setState(prevState => ({
-      age: prevState.age + 1
-    }));
-  }
-
-  onAgeDown = () => {
-    this.setState(prevState => ({
-      age: prevState.age - 1
-    }));
-  }
-  */
+ 
   render() {
     return (
       <div className="App">
@@ -48,8 +26,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-  onAgeUp: () => dispatch({type:'AGE_UP'}),
-  onAgeDown: () => dispatch({type:'AGE_DOWN'})
+  onAgeUp: () => dispatch({type:'AGE_UP', val:3}),
+  onAgeDown: () => dispatch({type:'AGE_DOWN', val:3})
   }
 }
 
