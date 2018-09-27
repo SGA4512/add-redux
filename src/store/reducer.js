@@ -6,12 +6,19 @@ const initialState = { //default
 const reducer = (state = initialState, action) => {
     const newState = {...state};
 
-    if(action.type === 'AGE_UP'){
-        newState.age += action.val;
+    switch(action.type){
+        case 'AGE_UP': 
+            newState.age += action.val;
+            break;
+        
+        case 'AGE_DOWN': 
+            newState.age -= action.val;
+            break;
+
+        default:
+            return state;
     }
-    if(action.type === 'AGE_DOWN'){
-        newState.age -= action.val;
-    }
+
 
     return newState;
 
